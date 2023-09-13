@@ -1,0 +1,36 @@
+@font-face{
+    src: url("./poppints.ttf");
+    font-family: "Poppins";
+}
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+body{
+    background: #e3e9f7;
+}
+img{
+    width: 100%;
+}
+header{
+    width: 80%;
+    height: 70px;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+.logo{
+    width: 120px;
+    margin-top: 8px;
+}
+nav .logo{
+    display: none;
+}
