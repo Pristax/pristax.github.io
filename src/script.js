@@ -1,5 +1,8 @@
 const interactive = document.querySelector('.interactive');
 
+console.log("JavaScript Running");
+
 window.addEventListener('mousemove', (e) => {
-    interactive.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    interactive.style.left = e.clientX + 'px';
+    interactive.style.top = e.clientY + 'px';
 });
