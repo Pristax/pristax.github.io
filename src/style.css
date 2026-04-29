@@ -55,6 +55,11 @@ html, body
     }
 }
 
+.interactive {
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
 .gradient-bg
 {
     width: 100vw;

@@ -21,4 +21,6 @@ window.addEventListener('mousemove', (e) => {
     mouseY = e.clientY;
 });
 
+interactive.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+
 animate();
