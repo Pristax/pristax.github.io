@@ -1,30 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const interBubble = document.querySelector('.interactive');
+const interactive = document.querySelector('.interactive');
 
-    if (!interBubble) return; // pojistka kdyby element neexistoval
+let mouseX = 0;
+let mouseY = 0;
 
-    let curX = 0;
-    let curY = 0;
-    let tgX = 0;
-    let tgY = 0;
+let currentX = 0;
+let currentY = 0;
 
-    function move() {
-        // plynulé následování kurzoru (smooth efekt)
-        curX += (tgX - curX) / 20;
-        curY += (tgY - curY) / 20;
+// plynulé sledování (smooth efekt)
+function animate() {
+    currentX += (mouseX - currentX) * 0.1;
+    currentY += (mouseY - currentY) * 0.1;
 
-        interBubble.style.transform =
-            `translate(${curX}px, ${curY}px)`;
+    interactive.style.transform = `translate(${currentX}px, ${currentY}px)`;
 
-        requestAnimationFrame(move);
-    }
+    requestAnimationFrame(animate);
+}
 
-    window.addEventListener('mousemove', (e) => {
-        tgX = e.clientX;
-        tgY = e.clientY;
-    });
-
-    move();
+window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 });
 
-console.log("JS běží");
+animate();
