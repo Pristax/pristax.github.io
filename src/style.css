@@ -270,6 +270,29 @@ body {
 .typed::after { content: '|'; animation: blink 0.7s infinite; color: rgb(var(--color5)); }
 @keyframes blink { 50% { opacity: 0; } }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content, 
+.projects-header, 
+.project-grid,
+.about-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.project-grid {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
 /* --- SCROLL DOWN SECTION --- */
 .scroll-down {
     position: absolute;
