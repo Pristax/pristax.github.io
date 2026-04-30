@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             currentX += (mouseX - currentX) * 0.08;
             currentY += (mouseY - currentY) * 0.08;
 
-            interactive.style.left = currentX + "px";
-            interactive.style.top = currentY + "px";
+            interactive.style.left = (currentX - 400) + "px";
+            interactive.style.top = (currentY - 400) + "px";
         }
 
         requestAnimationFrame(animate);
