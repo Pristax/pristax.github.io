@@ -270,45 +270,43 @@ body {
 .typed::after { content: '|'; animation: blink 0.7s infinite; color: rgb(var(--color5)); }
 @keyframes blink { 50% { opacity: 0; } }
 
+/* --- SCROLL DOWN SECTION --- */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    pointer-events: none;
+    z-index: 99;
+    
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0; 
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.hero-content, 
-.projects-header, 
-.project-grid,
-.about-section {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.project-grid {
-    animation-delay: 0.2s;
-    opacity: 0;
-}
-
-/* --- SCROLL DOWN SECTION --- */
-.scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-    pointer-events: none;
 }
 
 .arrow {
@@ -390,6 +388,32 @@ body {
     margin-left: 12px;
 }
 
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1, 
+.hero-content p, 
+.hero-content .cta,
+.projects-header, 
+.project-grid,
+.about-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.project-grid {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
 .github:hover i { color: #ffffff; }
 .instagram:hover i { color: #E1306C; }
 .youtube:hover i { color: #FF0000; }
@@ -410,7 +434,7 @@ body {
     .footer-brand { align-items: center; }
     .footer-nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
     .social-links { gap: 15px; justify-content: center;}
-    .social-btn { max-width: 50px; padding: 10px 14px; align-content: center;}
+    .social-btn { max-width: 50px; padding: 10px 14px; text-align: center;}
 }
 
 @media (max-width: 600px) {
