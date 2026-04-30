@@ -381,3 +381,25 @@ body {
         gap: 15px;
     }
 }
+
+@media (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+}
