@@ -19,7 +19,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* --- POZADÍ S MŘÍŽKOU --- */
+/* --- BG --- */
 .gradient-bg {
     width: 100vw;
     height: 100vh;
@@ -105,6 +105,15 @@ body {
 .nav-links a:hover { color: white; }
 .nav-links a:hover::before { transform: scaleX(1); transform-origin: left; }
 .nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-links a.active {
+    color: white !important;
+}
+
+.nav-links a.active::after {
+    transform: scaleX(1); 
+    background: rgb(var(--color5));
+}
 
 /* --- HERO --- */
 .hero {
@@ -300,4 +309,75 @@ body {
     0% { top: -100%; }
     50% { top: 0; }
     100% { top: 100%; }
+}
+
+
+/* --- RESPONSIVITY --- */
+@media (max-width: 768px) {
+
+    .interactive {
+        display: none;
+    }
+
+    .nav-inner {
+        padding: 10px 15px;
+    }
+    
+    .nav-links {
+        gap: 5px;
+    }
+    
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 0 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 }
