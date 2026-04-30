@@ -390,7 +390,6 @@ body {
     margin-left: 12px;
 }
 
-/* Specifické barvy při hoveru */
 .github:hover i { color: #ffffff; }
 .instagram:hover i { color: #E1306C; }
 .youtube:hover i { color: #FF0000; }
