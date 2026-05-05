@@ -51,4 +51,33 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(typeLoop, isDel ? 60 : 120);
     }
     typeLoop();
+
+// --- PROJECT FILTERING DEBUG VERZE ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    console.log("Počet nalezených tlačítek:", filterButtons.length);
+    console.log("Počet nalezených karet:", projectCards.length);
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterValue = button.getAttribute('data-filter');
+            console.log("Kliknuto na filtr:", filterValue);
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            projectCards.forEach(card => {
+                console.log("Karta třídy:", card.className);
+
+                if (filterValue === 'all' || card.classList.contains(filterValue)) {
+                    card.classList.remove('hide');
+                    card.style.display = "block";
+                } else {
+                    card.classList.add('hide');
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
 });
